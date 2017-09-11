@@ -1,0 +1,38 @@
+{
+  "name": "Shift",
+  "plural": "Shifts",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "date": {
+      "type": "number",
+      "required": true
+    },
+    "requiredPeople": {
+      "type": "number",
+      "required": true
+    },
+    "day": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "reviews": {
+      "type": "hasMany",
+      "model": "Review",
+      "foreignKey": ""
+    },
+    "reviewers": {
+      "type": "hasMany",
+      "model": "Reviewer",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
